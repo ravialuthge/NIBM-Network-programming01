@@ -23,6 +23,6 @@ class TCP(Structure):
     def __int__(self,socket_buffer = None):
         self.src_address=socket.inet_ntoa(struct.pack("@I",self.src))
 
-rfile = open("ip.bin","rb").read()
+rfile = open("tcp.bin","rb").read()
 tcp =TCP(rfile[0:20])
 print(tcp.src_address)
